@@ -1,0 +1,258 @@
+nav {
+	display: flex;
+	justify-content: space-around;
+}
+nav > a > div {
+	padding: 0 20px;
+	border: 10px solid #9dd7f4;
+	border-radius: 10px;
+	background-color: #9dd7f4;
+	color: #000000;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+nav > a:hover > div,
+nav > a:focus-visible > div {
+	background-color: #063248;
+	border-color: #063248;
+	color: #9dd7f4;
+	outline: 2px solid #9dd7f4;
+}
+
+a {
+	all: unset;
+}
+
+ul {
+	justify-items: center;
+	padding: 0;
+}
+
+li {
+	all: unset;
+	height: fit-content;
+	display: flex;
+	background-color: #063248;
+	margin: 10px;
+	padding: 10px;
+	width: 80%;
+	align-items: center;
+	text-align: center;
+	justify-content: space-between;
+	border-radius: 10px;
+}
+
+.company-logo {
+	height: 100px;
+	width: auto;
+	max-width: 150px;
+	object-fit: contain;
+}
+
+.job-details {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 0 16px;
+	color: #ffffff;
+}
+
+.job-details h3 {
+	margin: 0;
+	font-size: 20px;
+	color: #9dd7f4;
+}
+
+.job-title {
+	font-size: 16px;
+}
+
+.job-meta {
+	font-family: var(--mono);
+	font-size: 14px;
+	color: #9dd7f4;
+	opacity: 0.8;
+}
+
+section {
+	scroll-margin-top: 20px;
+	padding-bottom: 24px;
+}
+
+/* Home / hero */
+
+.headshot {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 6px solid #9dd7f4;
+	margin-top: 32px;
+	box-shadow: var(--shadow);
+}
+
+#home h1 {
+	margin-bottom: 8px;
+}
+
+.tagline {
+	max-width: 640px;
+	margin: 0 auto;
+	padding: 10px 20px;
+	line-height: 150%;
+}
+
+.hero-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 12px;
+	margin-top: 20px;
+}
+
+.button-link {
+	display: inline-block;
+	padding: 8px 20px;
+	border-radius: 10px;
+	background-color: #9dd7f4;
+	color: #000000;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.button-link:hover,
+.button-link:focus-visible {
+	background-color: #063248;
+	color: #9dd7f4;
+	outline: 2px solid #9dd7f4;
+}
+
+/* Projects */
+
+.project-list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 16px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.project {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: left;
+	justify-content: flex-start;
+	gap: 8px;
+	width: auto;
+	margin: 0;
+	padding: 20px;
+	box-sizing: border-box;
+	color: #ffffff;
+}
+
+.project h3 {
+	margin: 0;
+	font-size: 20px;
+	color: #9dd7f4;
+}
+
+.project-tech {
+	font-family: var(--mono);
+	font-size: 14px;
+	color: #9dd7f4;
+	opacity: 0.8;
+}
+
+.project-dates {
+	font-family: var(--mono);
+	font-size: 14px;
+	color: #9dd7f4;
+	opacity: 0.8;
+}
+
+.project-points {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin: 4px 0 0;
+	padding: 0;
+	width: 100%;
+}
+
+.project-points > li {
+	all: unset;
+	display: list-item;
+	list-style: disc outside;
+	margin-left: 20px;
+	font-size: 16px;
+	line-height: 150%;
+}
+
+/* Contact */
+
+.contact-list {
+	width: 80%;
+	margin: 20px auto 0;
+}
+
+.contact-item {
+	justify-content: center;
+	gap: 12px;
+	color: #ffffff;
+	flex-wrap: wrap;
+}
+
+.contact-label {
+	color: #9dd7f4;
+	font-weight: 500;
+}
+
+.contact-item a {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.contact-item a:hover,
+.contact-item a:focus-visible {
+	color: #9dd7f4;
+}
+
+footer {
+	margin-top: auto;
+	padding: 20px 0;
+	font-size: 14px;
+}
+
+@media (max-width: 768px) {
+	nav {
+		flex-wrap: wrap;
+	}
+
+	.project-list,
+	.contact-list {
+		grid-template-columns: minmax(0, 1fr);
+		width: 90%;
+	}
+
+	li {
+		width: 90%;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.company-logo {
+		height: 70px;
+		max-width: 120px;
+	}
+
+	.job-details {
+		padding: 0;
+	}
+
+	.headshot {
+		width: 150px;
+		height: 150px;
+	}
+}
